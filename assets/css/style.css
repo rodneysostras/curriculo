@@ -1,0 +1,138 @@
+ /* 
+ ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+ │ Copyright (c) 2021 by the author of the Curriculo project. All rights reserved.              │
+ │ This owner-supplied source code has no limitations on the condition imposed on the           │
+ │ maintenance of the copyright notice.                                                         │
+ │ For more information, read the LICENSE file at the root of the project.                      │
+ │ Written by author Rodney Sostras <rodney.sostras@gmail.com>.                                 │
+ └──────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+
+    line-height: 1.5;
+    color: #fff;
+
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: inherit;
+}
+
+section.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+
+    background: linear-gradient(180deg,#353c44,#363d45,#151c22,#101519);
+}
+
+.profile-avatar img{
+    border-radius: 50%;
+}
+
+.profile-name,
+.profile-category {
+    margin: 0px;
+    line-height: 1.8rem;
+}
+
+.profile-name {
+    font-weight: 700;
+}
+
+.profile-category {
+    font-weight: 300;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.profile-icon {
+    margin-bottom: 30px;
+}
+
+.profile-icon i{
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+.profile-icon > i:first-child {
+    margin: 0;
+}
+
+.profile-action a{
+    position: relative;
+    display: inline-block;
+    min-width: 150px;
+    padding: 10px;
+    font-weight: 500;
+
+    background-color: #1E90FF;
+    border: 1px solid #1E90FF;
+}
+
+.profile-action a::before{
+    content: "";
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+
+    pointer-events: none;
+    border-radius: inherit;
+
+    color: inherit;
+    background-color: currentColor;
+
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.profile-action a:hover::before {
+    opacity: 0.18;
+}
+
+.profile-action a.outline {
+    border: 1px solid #fff;
+    background-color: transparent;
+    margin-right: 20px;
+}
+
+.profile-go {
+    position: absolute;
+    display: block;
+    top: calc(100vh - 50px);
+    left: 50%;
+    font-size: 0;
+    color: transparent;
+}
+
+.profile-go::after,
+.profile-go::before {
+    content: "";
+    display: inline-block;
+    height: .125rem; /* 2px */
+    width: 2rem; /* 32px */
+    color: #fff;
+    cursor: pointer;
+}
