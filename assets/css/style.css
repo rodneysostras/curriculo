@@ -37,7 +37,7 @@ a {
     color: inherit;
 }
 
-section.profile{
+aside{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,8 +48,9 @@ section.profile{
     background: linear-gradient(180deg,#353c44,#363d45,#151c22,#101519);
 }
 
-.profile-avatar img{
+.profile-avatar {
     border-radius: 50%;
+    margin-bottom: 5px;
 }
 
 .profile-name,
@@ -64,22 +65,21 @@ section.profile{
 
 .profile-category {
     font-weight: 300;
-    text-align: justify;
     margin-bottom: 20px;
 }
 .profile-icon {
     margin-bottom: 30px;
 }
 
-.profile-icon i{
+.profile-icon > a{
     font-size: 1.5rem;
     margin-left: 15px;
 }
-.profile-icon > i:first-child {
+.profile-icon > a:first-child {
     margin: 0;
 }
 
-.profile-action a{
+.profile-action > a{
     position: relative;
     display: inline-block;
     min-width: 150px;
@@ -90,7 +90,7 @@ section.profile{
     border: 1px solid #1E90FF;
 }
 
-.profile-action a::before{
+.profile-action > a::before{
     content: "";
     position:absolute;
     top: 0;
@@ -108,11 +108,11 @@ section.profile{
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
 }
 
-.profile-action a:hover::before {
+.profile-action > a:hover::before {
     opacity: 0.18;
 }
 
-.profile-action a.outline {
+.profile-action > a.outline {
     border: 1px solid #fff;
     background-color: transparent;
     margin-right: 20px;
@@ -121,7 +121,7 @@ section.profile{
 .profile-go {
     position: absolute;
     left: calc(50% - 25px);
-    top: calc(100vh - 90px);
+    top: calc(100vh - 110px);
     font-size: 0;
 
     padding: 20px;
@@ -135,9 +135,89 @@ section.profile{
     -webkit-animation: godown 1.5s infinite;
 }
 
-.curriculum {
-    min-height: 100vh;
+main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px auto 30px 1fr;
+    gap: 0px 0px;
+    grid-template-areas: 
+        "curriculum-avatar curriculum-profile"
+        "curriculum-avatar curriculum-about"
+        "curriculum-avatar curriculum-social"
+        "curriculum-cards curriculum-cards";
+
+    min-height: calc(100vh - 64px);
+    padding: 5vh 5vw;
     background: linear-gradient(180deg,#101519, #fafafa);
+}
+
+
+.curriculum-avatar {
+    grid-area: curriculum-avatar;
+    border: 1px solid #fff;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+.curriculum-profile {
+    grid-area: curriculum-profile;
+    padding: 0 15px;
+    margin-bottom: 5px;
+}
+
+.curriculum-profile h1{
+    width: 100%;
+    margin: 0;
+
+    border-bottom: 1px solid #cecece;
+}
+
+.curriculum-profile h2{
+    font-size: 1rem;
+    margin:0;
+}
+
+.curriculum-profile span {
+    margin-right: 30px;
+}
+.curriculum-profile span i {
+    margin-right: 5px;
+    color: #1E90FF;
+}
+
+.curriculum-about {
+    grid-area: curriculum-about;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+}
+.curriculum-about p {
+    margin: 0;
+}
+
+.curriculum-social {
+    grid-area: curriculum-social;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.4rem;
+}
+
+.curriculum-card{
+    grid-area: curriculum-cards;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    justify-content: space-around;
+    padding-top: 25px;
+}
+
+.curriculum-card-item {
+    height: 300px;
+    width: 350px;
+    background-color: #fff;
 }
 
 footer {
@@ -145,6 +225,8 @@ footer {
     font-weight: 700;
     text-align: center;
     padding: 20px;
+
+    background: linear-gradient(180deg, #fafafa, #fff);
 }
 
 

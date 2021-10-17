@@ -1,4 +1,4 @@
 {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "EditorConfig.EditorConfig"
+    "editor.defaultFormatter": "vscode.html-language-features"
 }
