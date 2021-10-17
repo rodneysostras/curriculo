@@ -120,19 +120,57 @@ section.profile{
 
 .profile-go {
     position: absolute;
-    display: block;
-    top: calc(100vh - 50px);
-    left: 50%;
+    left: calc(50% - 25px);
+    top: calc(100vh - 90px);
     font-size: 0;
-    color: transparent;
+
+    padding: 20px;
+    box-shadow: 2px -2px 0 1px #ffffff95 inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+
+    transform: rotate(-45deg);
+
+    animation: godown 1.5s infinite;
+    -webkit-animation: godown 1.5s infinite;
 }
 
-.profile-go::after,
-.profile-go::before {
-    content: "";
-    display: inline-block;
-    height: .125rem; /* 2px */
-    width: 2rem; /* 32px */
-    color: #fff;
-    cursor: pointer;
+.curriculum {
+    min-height: 100vh;
+    background: linear-gradient(180deg,#101519, #fafafa);
 }
+
+footer {
+    color: #1E90FF;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@-webkit-keyframes godown {
+    0% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  @keyframes godown {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
