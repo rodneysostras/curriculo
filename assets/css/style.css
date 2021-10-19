@@ -49,8 +49,10 @@ aside{
 }
 
 .profile-avatar {
+    height: 180px;
+    width: 180px;
     border-radius: 50%;
-    margin-bottom: 5px;
+    margin-bottom: 1vh;
 }
 
 .profile-name,
@@ -66,25 +68,27 @@ aside{
 .profile-category {
     font-size: 1.3rem;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 2.5vh;
 }
 .profile-icon {
-    margin-bottom: 30px;
+    margin-bottom: 3.5vh;
 }
 
-.profile-icon > a{
+.profile-icon > a {
     font-size: 1.5rem;
-    margin-left: 15px;
+    margin-left: 1.5vw;
 }
 .profile-icon > a:first-child {
     margin: 0;
 }
 
-.profile-action > a{
+.profile-action > a {
     position: relative;
     display: inline-block;
-    min-width: 150px;
-    padding: 10px;
+    width: 11vw;
+    min-width: 160px;
+    padding: 1.5vh 1.5vw;
+    margin-bottom: 1vh;
     font-weight: 500;
 
     background-color: #1E90FF;
@@ -116,7 +120,7 @@ aside{
 .profile-action > a.outline {
     border: 1px solid #fff;
     background-color: transparent;
-    margin-right: 20px;
+    margin-right: 1.5vw;
 }
 
 .profile-go {
@@ -151,7 +155,25 @@ main {
     padding: 10vh 5vw 0 5vw;
     background: linear-gradient(180deg,#101519, #fafafa);
 }
+@media (max-width: 960px) {
+    main{
+        grid-template-rows: 200px auto 30px 1fr;
+        gap: 1vh 1vw;
+        grid-template-areas: 
+        "curriculum-avatar curriculum-profile"
+        "curriculum-about curriculum-about"
+        "curriculum-social curriculum-social"
+        "curriculum-cards curriculum-cards";
+    }
+}
 
+@media (max-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 .curriculum-avatar {
     grid-area: curriculum-avatar;
@@ -167,7 +189,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: flex-end;
-    padding: 0 15px;
+    padding: 0 1.1vw;
 }
 
 .curriculum-profile h1{
@@ -180,15 +202,27 @@ main {
 }
 
 .curriculum-profile span i {
-    margin-right: 5px;
+    margin-right: 0.5vw;
     color: #1E90FF;
+}
+
+@media (max-width: 960px) {
+    .curriculum-profile {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+
 }
 
 .curriculum-about {
     grid-area: curriculum-about;
     display: flex;
     align-items: center;
-    padding: 0 25px;
+    padding: 0 1.8vw;
     font-weight: 300;
 }
 .curriculum-about p {
@@ -200,23 +234,25 @@ main {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
+    width: 100%;
     font-size: 1.4rem;
 }
 
-.curriculum-card{
+.curriculum-card {
     grid-area: curriculum-cards;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px 10px;
+    gap: 2vh 1vw;
     justify-content: space-around;
     align-items: center;
-    padding-top: 25px;
 }
 
 .curriculum-card-item {
-    height: 300px;
-    width: 350px;
+    height: 42vh;
+    min-height: 300px;
+    width: 26vw;
+    min-width: 350px;
     padding: 10px;
     color: #000;
     background-color: #fff;
@@ -229,39 +265,39 @@ main {
     border-left-style: solid;
 }
 
-.curriculum-card-item.card-border-yellow{
-    border-color: gold;
+.curriculum-card-item.card-border-red{
+    border-color: red;
+}
+
+.curriculum-card-item.card-border-green{
+    border-color: green;
 }
 
 .curriculum-card-item.card-border-blue{
     border-color: #1E90FF;
 }
 
-.curriculum-card-item.card-border-red{
-    border-color: red;
-}
-
-.curriculum-card-item.card-border-yellow > h2 {
-    color: gold;
-}
-
-.curriculum-card-item.card-border-blue > h2{
-    color: #1E90FF;
-}
-
 .curriculum-card-item.card-border-red > h2{
     color: red;
 }
 
-.curriculum-card-item h2{
+.curriculum-card-item.card-border-green > h2 {
+    color: green;
+}
+
+.curriculum-card-item.card-border-blue > h2 {
+    color: #1E90FF;
+}
+
+.curriculum-card-item h2 {
     width: 100%;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 2.5vh;
 
 }
 
 .curriculum-education-item h3 {
-    line-height: .890rem;
+    line-height: .75rem;
 }
 
 .curriculum-education-item h3,
@@ -276,31 +312,34 @@ main {
 .curriculum-education-item p {
     margin-top: 5px;
     margin-left: 5px;
+    font-size: 0.875rem;
 }
 
-.curriculum-card-item .curriculum-skill-item {
+.curriculum-skill-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.curriculum-skill-item .curriculum-skill-sky {
+.curriculum-skill-sky {
     direction: rtl;
 }
 
-.curriculum-skill-sky .curriculum-skill-star {
+.curriculum-skill-star {
     display: inline-block;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1rem;
     color: #0000001f;
-}
-
-.curriculum-skill-sky .curriculum-skill-star.checked{
-    color: gold;
     cursor: pointer;
 }
-.curriculum-skill-sky .curriculum-skill-star.checked:hover{
+
+.curriculum-skill-star.checked{
+    color: gold;
+}
+
+.curriculum-skill-star.checked:hover{
     color: goldenrod;
+    font-size: 1.7rem;
 }
 
 .curriculum-skill-sky .curriculum-skill-star.checked:hover ~ .curriculum-skill-star.checked {
