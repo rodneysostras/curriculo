@@ -241,11 +241,41 @@ main {
     border-color: red;
 }
 
+.curriculum-card-item.card-border-yellow > h2 {
+    color: gold;
+}
+
+.curriculum-card-item.card-border-blue > h2{
+    color: #1E90FF;
+}
+
+.curriculum-card-item.card-border-red > h2{
+    color: red;
+}
+
 .curriculum-card-item h2{
     width: 100%;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
+}
+
+.curriculum-education-item h3 {
+    line-height: .890rem;
+}
+
+.curriculum-education-item h3,
+.curriculum-education-item h5 {
+    margin: 0;
+}
+
+.curriculum-education-item h5 {
+    font-weight: 300;
+}
+
+.curriculum-education-item p {
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 .curriculum-card-item .curriculum-skill-item {
@@ -267,6 +297,7 @@ main {
 
 .curriculum-skill-sky .curriculum-skill-star.checked{
     color: gold;
+    cursor: pointer;
 }
 .curriculum-skill-sky .curriculum-skill-star.checked:hover{
     color: goldenrod;
