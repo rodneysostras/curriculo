@@ -157,12 +157,12 @@ main {
 }
 @media (max-width: 960px) {
     main{
-        grid-template-rows: 200px auto 30px 1fr;
+        grid-template-rows: 200px 30px auto 1fr;
         gap: 1vh 1vw;
         grid-template-areas: 
         "curriculum-avatar curriculum-profile"
-        "curriculum-about curriculum-about"
         "curriculum-social curriculum-social"
+        "curriculum-about curriculum-about"
         "curriculum-cards curriculum-cards";
     }
 }
@@ -243,16 +243,15 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2vh 1vw;
     justify-content: space-around;
     align-items: center;
+    gap: 2vh 1vw;
+    padding-top: 2vh;
 }
 
 .curriculum-card-item {
-    height: 42vh;
-    min-height: 300px;
-    width: 26vw;
-    min-width: 350px;
+    height: 300px;
+    width: 355px;
     padding: 10px;
     color: #000;
     background-color: #fff;
@@ -319,6 +318,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .curriculum-skill-sky {
