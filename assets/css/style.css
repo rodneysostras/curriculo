@@ -183,6 +183,11 @@ main {
     padding: 10px;
 }
 
+.curriculum-avatar img {
+    height: 180px;
+    width: 180px;
+}
+
 .curriculum-profile {
     grid-area: curriculum-profile;
     display: flex;
