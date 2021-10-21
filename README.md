@@ -1,4 +1,4 @@
-<img src="assets\img\icons-curriculum-256.png" alt="" />
+<center><img src="assets\img\icons-curriculum-256.png" alt="" /></center>
 
 # Meu currículo em HTML + CSS
 
@@ -10,7 +10,7 @@ Eu sou Rodney Sostras, desenvolvedor Front-end, apresento este pequeno portfolio
 <center>
 Site Preview | <a href="https://rodneysostras.github.io,com/curriculo">Site Demo</a>
 </center>
-![curriculum-preview](assets\img\curriculum-preview.gif)
+<img src="assets\img\curriculum-preview.gif">
 
 
 
