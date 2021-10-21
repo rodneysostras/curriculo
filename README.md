@@ -7,7 +7,7 @@
 Eu sou Rodney Sostras, desenvolvedor Front-end, apresento este pequeno portfolio, meu forte não e UX Design ainda mas, fiz o meu melhor para demostrar minhas técnicas em codificação HTML + CSS, também sei usar Javascript porém quando monto um layout tento usar máximo possível 'tricks' do CSS.
 <br/>
 <div align="center">
-    Site Preview | <a href="https://rodneysostras.github.io.com/curriculo" alt="curriculo" target="_blank">Site Demo</a>   
+    Site Preview | <a href="https://rodneysostras.github.io/curriculo/" alt="Web pagina contendo currículo" target="_blank">Site Demo</a>   
 </div>
 <br/>
 <div align="center">
